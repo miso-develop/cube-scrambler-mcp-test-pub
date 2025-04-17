@@ -1,0 +1,2 @@
+# Cube Scrambler MCP Server
+
