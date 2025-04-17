@@ -41,4 +41,3 @@ server.tool("sequence", "ルービックキューブをCube Scramblerにて指�
 });
 const transport = new StdioServerTransport();
 await server.connect(transport);
-console.log("start!");
