@@ -61,7 +61,7 @@ server.tool(
 
 server.tool(
 	"sequence",
-	"ルービックキューブをCube Scramblerにて指定のシーケンスに沿って動かす",
+	"ルービックキューブをCube Scramblerにて指定のシーケンスに沿って操作する",
 	{ sequence: z.string().regex(new RegExp(/^[LRUDFB]['2]?(\s[LRUDFB]['2]?)*$/)) },
 	async ({ sequence }) => {
 		const endpoint = `${BASE_URL}/api/sequence?sequence=${sequence}`

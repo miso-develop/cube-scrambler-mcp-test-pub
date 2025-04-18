@@ -33,7 +33,7 @@ server.tool("step-oll", "ソルブ済みのルービックキューブをCube Sc
     const result = await response.json();
     return { content: [{ type: "text", text: JSON.stringify(result) }] };
 });
-server.tool("sequence", "ルービックキューブをCube Scramblerにて指定のシーケンスに沿って動かす", { sequence: z.string().regex(new RegExp(/^[LRUDFB]['2]?(\s[LRUDFB]['2]?)*$/)) }, async ({ sequence }) => {
+server.tool("sequence", "ルービックキューブをCube Scramblerにて指定のシーケンスに沿って操作する", { sequence: z.string().regex(new RegExp(/^[LRUDFB]['2]?(\s[LRUDFB]['2]?)*$/)) }, async ({ sequence }) => {
     const endpoint = `${BASE_URL}/api/sequence?sequence=${sequence}`;
     const response = await fetch(endpoint);
     const result = await response.json();
